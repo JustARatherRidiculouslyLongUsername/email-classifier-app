@@ -10,7 +10,7 @@ app.get('/', (req, res) => { res.send('cool') })
 app.get('/:a/:b', (req, res) => {
 	let {a, b} = req.params
 	
-	const python_process = spawn('python', ['./x.py', a, b])
+	const python_process = spawn('python3', ['./x.py', a, b])
 
 	python_process.stdout.on('data', data => {
 		console.log('python says ', data)
